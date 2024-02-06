@@ -1,0 +1,35 @@
+#+TITLE: Kafka CLI Tool
+
+This is a simple command-line interface (CLI) tool for managing Kafka topics.
+
+* Installation
+
+* Usage
+
+** List All Topics
+
+#+begin_src bash
+kafctl -brokers "localhost:9092" -list 
+#+end_src
+
+** Create Topic
+
+Without replicationFactor and partitions by default both are 1
+
+#+begin_src bash
+kafctl -brokers "localhost:9092" -create dumy2
+#+end_src>
+
+With replicationFactor and paritions
+
+#+begin_src bash
+kafctl -brokers "locatlhost:9092" -brokers "localhost:9092" -create dumy4 -partitions 3 -replication 1
+#+end_src>
+
+** Delete Topic
+
+ To delete topic
+
+ #+begin_src bash
+ brokers "localhost:9092" -delete dumy1
+ #+end_src>
