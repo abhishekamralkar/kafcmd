@@ -1,5 +1,5 @@
 # .goreleaser.yml
-project_name: kafctl
+project_name: kafcmd
 
 # Build settings
 builds:
@@ -14,7 +14,7 @@ builds:
 
 # Archive settings
 archives:
-  - id: kafctl
+  - id: kafcmd
     name_template: >-
       {{- .ProjectName }}_
       {{- title .Os }}_
@@ -27,7 +27,7 @@ archives:
 release:
   github:
     owner: abhishekamralkar
-    name: kafctl
+    name: kafcmd
 
 # Checksum settings
 checksum:

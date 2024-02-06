@@ -1,4 +1,4 @@
-module github.com/abhishekamralkar/kafctl
+module github.com/abhishekamralkar/kafcmd
 
 go 1.21.1
 
