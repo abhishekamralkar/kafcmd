@@ -5,13 +5,13 @@ WORKDIR /app
 
 COPY . .
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o kafctl .
+RUN CGO_ENABLED=0 GOOS=linux go build -o kafcmd .
 
 # Stage 2: Create a minimal runtime image
 FROM alpine:latest
 
 WORKDIR /app
 
-COPY --from=builder /app/kafctl .
+COPY --from=builder /app/kafcmd .
 
-CMD ["./kafctl"]
+CMD ["./kafcmd"]
