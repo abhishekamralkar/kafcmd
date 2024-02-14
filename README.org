@@ -9,7 +9,7 @@ This is a simple command-line interface (CLI) tool for managing Kafka topics.
 ** List All Topics
 
 #+begin_src bash
-kafcmd -brokers "localhost:9092" -list 
+kafcmd -list 
 #+end_src
 
 ** Create Topic
@@ -17,13 +17,13 @@ kafcmd -brokers "localhost:9092" -list
 Without replicationFactor and partitions by default both are 1
 
 #+begin_src bash
-kafcmd -brokers "localhost:9092" -create dumy2
+kafcmd -create dumy2
 #+end_src>
 
 With replicationFactor and paritions
 
 #+begin_src bash
-kafcmd -brokers "locatlhost:9092" -brokers "localhost:9092" -create dumy4 -partitions 3 -replication 1
+kafcmd -brokers -create dumy4 -partitions 3 -replication 1
 #+end_src>
 
 ** Delete Topic
@@ -31,5 +31,5 @@ kafcmd -brokers "locatlhost:9092" -brokers "localhost:9092" -create dumy4 -parti
  To delete topic
 
  #+begin_src bash
- brokers "localhost:9092" -delete dumy1
+ kafcmd-delete dumy1
  #+end_src>
