@@ -1,4 +1,4 @@
-#+TITLE: Kafka CLI Tool
+#+TITLE: kafCMD Tool
 
 This is a simple command-line interface (CLI) tool for managing Kafka topics.
 
